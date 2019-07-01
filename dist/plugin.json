@@ -1,0 +1,44 @@
+{
+    "type": "datasource",
+    "name": "CloudStats",
+    "id": "cloudstats-datasource",
+  
+    "info": {
+      "description": "CloudStats.app datasource",
+      "author": {
+        "name": "CloudStats",
+        "url": "https://cloudstats.app"
+      },
+      "keywords": ["cloudstats"],
+      "logos": {
+        "small": "img/cloudstats.png",
+        "large": "img/cloudstats.png"
+      },
+      "links": [
+        {"name": "Project site", "url": "https://cloudstats.app"}
+      ],
+      "version": "1.0.0",
+      "updated": "2019-07-01"
+    },
+
+    "routes": [
+      {
+        "path": "v1",
+        "url": "https://cloudstats.app/v1",
+        "reqSignedIn": true,
+        "reqRole": "Viewer",
+        "headers": [
+          { "name": "Authorization", "content": "Bearer {{.SecureJsonData.apiKey}}"},
+          { "name": "X-Provider", "content": "{{.JsonData.provider}}"}
+        ]
+      }
+    ],
+
+    "annotations": true,
+    "metrics": false,
+  
+    "dependencies": {
+      "grafanaVersion": "5.x.x",
+      "plugins": []
+    }
+  }
