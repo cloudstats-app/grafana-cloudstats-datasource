@@ -10,7 +10,7 @@ CloudStats Datasource is Grafana annotations datasource to access cloud provider
 - [**Digital Ocean**](https://digitalocean.com/)
 #### Docker registries
 - [**Docker**](https://hub.docker.com/)
-- [**Quay.ia**](https://quay.io)
+- [**Quay.io**](https://quay.io)
 #### Messaging
 - [**Slack**](https://slack.com)
 #### Log Management
