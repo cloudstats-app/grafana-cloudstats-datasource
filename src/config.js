@@ -51,9 +51,9 @@ export class CloudStatsConfigCtrl {
         type: "docker"
       },
       {
-        name: "Slack",
-        type: "slack"
-      }
+        name: "Cloudflare",
+        type: "cloudflare"
+      },
     ]
   }
 }

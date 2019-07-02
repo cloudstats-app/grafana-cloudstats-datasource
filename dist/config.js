@@ -56,8 +56,8 @@ System.register(["./partials/config.html!text"], function (_export, _context) {
           name: "Docker",
           type: "docker"
         }, {
-          name: "Slack",
-          type: "slack"
+          name: "Cloudflare",
+          type: "cloudflare"
         }];
       });
 

@@ -2,10 +2,28 @@
 CloudStats Datasource is Grafana annotations datasource to access cloud providers status inside dashboard.
 
 ## Cloud Providers
-- **Amazon Web Services**  
+#### Data Centers
+- [**Amazon Web Services**](https://aws.amazon.com/)  
   - *Filtering by services and regions*
-- **Google Cloud Platform**  
+- [**Google Cloud Platform**](https://cloud.google.com/)  
   - *Range annotations*
+- [**Digital Ocean**](https://digitalocean.com/)
+#### Docker registries
+- [**Docker**](https://hub.docker.com/)
+- [**Quay.ia**](https://quay.io)
+#### Messaging
+- [**Slack**](https://slack.com)
+#### Log Management
+- [**Logz.io**](https://logz.io)
+#### Version Control
+- [**Github**](https://github.com)
+#### Notifications Services
+- [**Twilio**](https://twilio.com)
+- [**Sendgrid**](https://sendgrid.com)
+#### Networking
+- [**Cloudflare**](https://cloudflare.com)
+#### Billing
+- [**Chargebee**](https://chargebee.com)
 
 ## Installing
 TODO
