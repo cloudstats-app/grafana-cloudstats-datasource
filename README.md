@@ -26,7 +26,35 @@ CloudStats Datasource is Grafana annotations datasource to access cloud provider
 - [**Chargebee**](https://chargebee.com)
 
 ## Installing
-TODO
+### Installing from Grafana
+Coming soon
+### Installing from source
+Download latest release or clone the repo to your Grafana server to plugins directory.  
+#### OS package
+Plugins directory on linux usually is `/var/lib/grafana/plugins`. Clone/download/soft link repository into it.  
+For example cloning:
+```
+$ cd /var/lib/grafana/plugins
+$ git clone https://github.com/cloudstats-app/grafana-cloudstats-datasource.git
+$ systemctl restart grafana-server
+```
+#### Docker
+In custom image download the plugin to plugins directory or mount it into container.  
+Dockerfile example:
+```
+...
+ADD --chown=grafana:grafana https://github.com/cloudstats-app/grafana-cloudstats-datasource/archive/master.zip /tmp/master.zip
+RUN unzip /tmp/master.zip -d /tmp && \
+    mkdir -p ${GF_PATHS_PLUGINS}/grafana-cloudstats-datasource && \
+    cp -a /tmp/grafana-cloudstats-datasource-master/dist/ ${GF_PATHS_PLUGINS}/grafana-cloudstats-datasource/ && \
+    rm -r /tmp/grafana-cloudstats-datasource-master /tmp/master.zip
+...
+```
+Mount example:
+```
+$ git clone https://github.com/cloudstats-app/grafana-cloudstats-datasource.git /opt/grafana-cloudstats-datasource
+$ docker run -d --name=grafana -p 3000:3000 -v /opt/grafana-cloudstats-datasource:/var/lib/grafana/plugins/grafana-cloudstats-datasource grafana/grafana
+```
 
 ## Registration
 Go to [cloudstats.app](https://cloudstats.app) and register to receive API key
