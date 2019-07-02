@@ -45,6 +45,14 @@ export class CloudStatsConfigCtrl {
       {
         name: "Quay.io",
         type: "quayio"
+      },
+      {
+        name: "Docker",
+        type: "docker"
+      },
+      {
+        name: "Slack",
+        type: "slack"
       }
     ]
   }

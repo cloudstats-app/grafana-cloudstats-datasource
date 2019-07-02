@@ -52,6 +52,12 @@ System.register(["./partials/config.html!text"], function (_export, _context) {
         }, {
           name: "Quay.io",
           type: "quayio"
+        }, {
+          name: "Docker",
+          type: "docker"
+        }, {
+          name: "Slack",
+          type: "slack"
         }];
       });
 
